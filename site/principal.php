@@ -12,7 +12,7 @@
     <div id="cabecalho">
         <a href="" class="botao" id="bot1">Principal</a>
         <a href="" class="botao" id="bot2">Calendario</a>
-        <a href="" class="botao" id="bot3">Registro de Produtos</a>
+        <a href="" class="botao" id="bot3">Cadastro de Produtos</a>
         <a href="" class="botao" id="bot4">Registro de Chegada</a>
         <a href="" class="botao" id="bot5">Registro de saída</a>
     </div>

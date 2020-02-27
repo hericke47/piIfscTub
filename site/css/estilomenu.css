@@ -8,7 +8,8 @@
 }
 
 body{
-    background-image: url(https://images6.alphacoders.com/420/thumb-1920-420211.jpg);
+    /*background-image: url(https://images6.alphacoders.com/420/thumb-1920-420211.jpg);*/
+    background-color: #39ace7;
 }
 
     /* links */
@@ -60,10 +61,11 @@ h1{
 #divBusca{
     float: right;
     margin-right: 5%;
-    background-color:#2F4F4F;
+    background-color: #39ace7;
     border:solid 1px;
     border-radius:15px;
     width:300px;
+    color: white;
 }
    
 #txtBusca{
@@ -74,7 +76,7 @@ h1{
     font-size:18px;
     border:none;
     height:32px;
-    width:260px;
+    width:235px;
     color: white;
 }
 
@@ -87,19 +89,21 @@ h1{
 /* margem dos blocos de cadastro */ 
 #espaco{
     width: 450px;
-    margin: auto auto auto 34%;
+    margin: auto auto auto 35%;
 
 }
 
 /* Alinhar os blocos do cadastro de produtos */
+
 .alinhacad{
     display: inline-block;
-    text-align: left;
-    margin-right: 40px;
+    margin-right: 40px; 
+    
 }
 
 p{
     color: white;
+    font-size: 20;
 }
 
 input{
@@ -107,18 +111,30 @@ input{
     height: 30px;
     border-radius: 10px;
     margin-left: 20px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.9);
     float: right;
 }
 
-.alinharseparado{
-    color: white;
-}
+
+
+
+
 /* formatação dos botoes de cadastro de produtos*/
 
 input[type=submit], [type=reset]{
-    display: flex;
-    margin-left: 32.2%;
-    background-color: #39ace7;
+    background-color: white;
+    color: #39ace7;
+    font:left;
+    font-size: 17;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 60px;
+    
 }
+
+#separado{
+    float: left;
+    margin-left: -6%;
+}
+
+
 
