@@ -1,0 +1,124 @@
+@media screen and (max-width: 1024px) {
+    /*estilos*/
+} 
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(https://images6.alphacoders.com/420/thumb-1920-420211.jpg);
+}
+
+    /* links */
+a{
+    font-family: arial, sans-serif;
+    display: inline-flex;
+    border: 1pt solid white;
+    text-decoration: none;
+    border-radius: 10px;
+    outline: none;
+    font-size: 16pt;
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* mouse hover */
+a:hover{
+    color: rgb(27, 3, 94);
+}
+
+/* BOTOES CABECALHO */
+#bot1{
+    padding: 20px 40px 20px 40px ;
+}
+#bot2{
+    padding: 20px 40px 20px 40px ;
+}
+#bot3{
+    padding: 20px 40px 20px 40px ;
+}
+#bot4{
+    padding: 20px 40px 20px 40px ;
+}
+#bot5{
+    padding: 20px 40px 20px 40px ;
+}
+
+/* Margem do cabecalho */
+#cabecalho{  
+    margin: 3% 5% 5% 6% ;
+}
+
+h1{
+    color: white;
+    margin: auto auto 2% 37%;
+}
+
+/* BOTAO DE BUSCA */ 
+#divBusca{
+    float: right;
+    margin-right: 5%;
+    background-color:#2F4F4F;
+    border:solid 1px;
+    border-radius:15px;
+    width:300px;
+}
+   
+#txtBusca{
+    outline: none;
+    float: left;
+    background-color:transparent;
+    padding-left:5px;
+    font-size:18px;
+    border:none;
+    height:32px;
+    width:260px;
+    color: white;
+}
+
+/* TITULO 'ESTOQUE ATUAL' */
+#titulo-estoque{
+      color: white;
+      margin: 140px 0px 0px 100px;
+}
+
+/* margem dos blocos de cadastro */ 
+#espaco{
+    width: 450px;
+    margin: auto auto auto 34%;
+
+}
+
+/* Alinhar os blocos do cadastro de produtos */
+.alinhacad{
+    display: inline-block;
+    text-align: left;
+    margin-right: 40px;
+}
+
+p{
+    color: white;
+}
+
+input{
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    margin-left: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    float: right;
+}
+
+.alinharseparado{
+    color: white;
+}
+/* formatação dos botoes de cadastro de produtos*/
+
+input[type=submit], [type=reset]{
+    display: flex;
+    margin-left: 32.2%;
+    background-color: #39ace7;
+}
+
