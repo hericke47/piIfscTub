@@ -46,13 +46,15 @@
             <th>Action</th>
         </tr>
         <tbody>
-            <tr>
-           <th></th>
-           <th></th>
-           <th></th>
-           <th></th>
-           <th></th>
+            @foreach($produtos as $produto)
+        <tr>
+           <td>{{$produto->idProduto}}</td>
+           <td>{{$produto->nome}}</td>
+           <td>{{$produto->quantidade}}</td>
+           <td>{{$produto->preco}}</td>
+           <td><a href="">Detalhes</a></td>
         </tr>
+            @endforeach
         </tbody>
     </thead>
     </table>
