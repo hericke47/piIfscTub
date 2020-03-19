@@ -19,4 +19,3 @@ Route::resource('produtos','ProdutoController');
 
 Route::view('login-usuario','login');
 
-//aaa

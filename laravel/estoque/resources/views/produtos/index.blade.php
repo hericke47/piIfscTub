@@ -24,7 +24,7 @@
     <button type="button" class="btn btn-purple">Principal</button>
     <button type="button" class="btn btn-purple">Calendário</button>
     <button type="button" class="btn btn-purple">Retirados</button>
-
+    
     <div class="btn-group" role="group">
         <button id="btnGroupDrop1" type="button" class="btn btn-purple dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Cadastrar..
@@ -47,7 +47,7 @@ td,tr,th{
 <!-- FIM CSS-->
     <div class="row">
         <div class="col-lg-12">
-            <h2 class="text-center">Cadastro de Produtos</h2>
+            <h2 class="text-center">Menu Principal</h2>
         </div>
         <div class="col-lg-12 text-center" style="margin-top:10px;margin-bottom: 10px;">
             <a class="btn btn-success " href="{{ route('produtos.create') }}"> Adicionar Produto</a>
