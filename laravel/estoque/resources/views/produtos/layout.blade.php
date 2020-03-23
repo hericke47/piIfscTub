@@ -6,8 +6,8 @@
 </head>
 <body>
 
-<div class="container">
-    <div class="card" style="margin-top: 100px;">
+<div class="container text-center ">
+    <div class="card" style="margin-top: 100px;" >
         <div class="card-body">
             @yield('content')
         </div>

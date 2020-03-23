@@ -18,7 +18,7 @@
     @endif
 
     @if(sizeof($produtos) > 0)
-        <table class="table table-bordered">
+        <table class="table table-bordered table-dark">
             <tr>
                 <th>#</th>
                 <th>nome</th>
@@ -28,7 +28,7 @@
             </tr>
             @foreach ($produtos as $produto)
                 <tr>
-                    <td>{{ ++$i }}</td>
+                    <td>{{ ++$i }} <input type="checkbox"> </td>
                     <td>{{ $produto->nome }}</td>
                     <td>{{ $produto->quantidade }}</td>
                     <td>{{ $produto->preco }}</td>
