@@ -11,8 +11,17 @@
 |
 */
 
-Route::get('/', function () {
-    return redirect('/produtos');
+// Route::get('/', function () {
+//     return redirect('/produtos');
+// });
+
+
+Route::get('/' ,function(){
+    return redirect('/fornecedores');
 });
 
+
+
 Route::resource('produtos','ProdutoController');
+Route::resource('fornecedores','FornecedorController');
+

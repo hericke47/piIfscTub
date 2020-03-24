@@ -1,5 +1,5 @@
 @extends('produtos.layout')
-
+@extends('../welcome')
 @section('content')
 
     <div class="row">
@@ -28,7 +28,7 @@
             </tr>
             @foreach ($produtos as $produto)
                 <tr>
-                    <td>{{ ++$i }} <input type="checkbox"> </td>
+                    <td>{{ ++$i }}</td>
                     <td>{{ $produto->nome }}</td>
                     <td>{{ $produto->quantidade }}</td>
                     <td>{{ $produto->preco }}</td>

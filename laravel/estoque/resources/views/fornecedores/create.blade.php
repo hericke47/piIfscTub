@@ -1,19 +1,19 @@
-@extends('produtos.layout')
+@extends('fornecedores.layout')
 
 @section('content')
 
     <div class="row">
         <div class="col-lg-12">
-            <h2 class="text-center">Editar Produto</h2>
+            <h2 class="text-center">Adicionar Fornecedor</h2>
         </div>
         <div class="col-lg-12 text-center" style="margin-top:10px;margin-bottom: 10px;">
-            <a class="btn btn-primary" href="{{ route('produtos.index') }}"> Voltar</a>
+            <a class="btn btn-primary" href="{{ route('fornecedores.index') }}"> Voltar</a>
         </div>
     </div>
 
     @if ($errors->any())
         <div class="alert alert-danger">
-            <strong>Whoops!</strong>Ocorreu um Problema ao adicionar produto<br><br>
+            <strong>Oops!</strong> Ocorreu um erro ao adicionar<br><br>
             <ul>
                 @foreach ($errors->all() as $error)
                     <li>{{ $error }}</li>
@@ -21,28 +21,32 @@
             </ul>
         </div>
     @endif
-
-    <form action="{{ route('produtos.update',$produto->id) }}" method="POST">
+    <form action="{{ route('fornecedores.store') }}" method="POST">
         @csrf
-        @method('PUT')
 
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Nome</strong>
-                    <input type="text" name="nome" value="{{ $produto->nome }}" class="form-control" placeholder="Nome">
+                    <strong>Razao</strong>
+                    <input type="text" name="razao" class="form-control" placeholder="Razao">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Quantidade</strong>
-                <input type="text" name="quantidade" value="{{ $produto->quantidade }}" class="form-control" placeholder="quantidade">
+                    <strong>CNPJ</strong>
+                    <input type="text" name="cnpj" class="form-control" placeholder="CNPJ">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Preço</strong>
-                <input type="text" name="preco" value="{{ $produto->preco }}" class="form-control" placeholder="Preco">
+                    <strong>Número</strong>
+                    <input type="text" name="numero" class="form-control" placeholder="Numero">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Whatsapp</strong>
+                    <input type="text" name="whatsapp" class="form-control" placeholder="Whatsapp">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
@@ -51,4 +55,5 @@
         </div>
 
     </form>
+
 @endsection
