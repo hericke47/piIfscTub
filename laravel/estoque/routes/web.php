@@ -17,7 +17,7 @@
 
 
 Route::get('/' ,function(){
-    return redirect('/fornecedores');
+    return view('index');
 });
 
 
