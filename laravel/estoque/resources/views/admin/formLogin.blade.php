@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-
     <style>
 
 html {
@@ -18,7 +16,12 @@ html {
 	height: 100vh;
   }
   
- 
+  a {
+	color: #92badd;
+	display:inline-block;
+	text-decoration: none;
+	font-weight: 400;
+  }
   
   h2 {
 	text-align: center;
@@ -67,7 +70,7 @@ html {
   }
   
   
-  input[type=button], input[type=submit], input[type=reset],a  {
+  input[type=button], button, input[type=reset]  {
 	background-color: #56baed;
 	border: none;
 	color: white;
@@ -81,11 +84,11 @@ html {
 	
   }
   
-  input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover {
+  input[type=button]:hover, button , input[type=reset]:hover  {
 	background-color: #39ace7;
   }
   
-  input[type=text], input[type=password] {
+  input[type=text],  input[type=password] {
 	background-color: #f6f6f6;
 	border: none;
 	color: #0d0d0d;
@@ -100,10 +103,11 @@ html {
 	
   }
   
-  input[type=text]:focus , input[type=password]:focus{
+  input[type=text]:focus, input[type=password]:focus {
 	background-color: #fff;
 	border-bottom: 2px solid #5fbae9;
   }
+  
     </style>
 </head>
 <body class="my-login-page">
@@ -114,10 +118,18 @@ html {
             <h3>Login</h3>
           </div>
       
-          <form action="../index.blade.php" method="post">
-            <input type="text" id="login" name="login" placeholder="login">
-            <input type="text" id="senha" name="senha" placeholder="senha">
-		  <a type="submit" value="Log In" href="{{route('produtos.index')}}" class="botao">Enviar</a>
+        <form action="{{ route('admin.login.do') }}" method="post">
+            @csrf
+            @if($errors->all())
+                @foreach($errors->all() as $error)
+                    <div class="alert alert-danger" role="alert">
+                        {{$error}}
+                    </div>
+                @endforeach
+            @endif
+            <input type="text" id="email" name="email"  placeholder="Email" required>
+            <input type="password" id="password" name="password" placeholder="senha" required>
+            <button type="submit" class="botao">Login</button>
           </form>
       
           
@@ -126,35 +138,10 @@ html {
       
         </div>
       </div>
+
+    <script src="bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+
+
+    
 </body>
 </html>
-
-
-{{-- 
-    
-    
-        $login = $_POST["login"];
-        $senha = $_POST["senha"];
-        if($login == "login123" && $senha == "senha123"){
-            echo "login efetuado com sucesso";
-        }else{
-            echo "deu n";
-        }
-     --}}
-
-	 {{-- @if(isset($_GET['enviar'])) --}}
-				 
-	 {{-- @if($_GET['login'] == 'admin' && $_GET['senha'] == 'admin')
-	 <div class="aler alert-warning">Login efetuado com sucesso</div>
-	 @else
-	   <div class="aler alert-warning">Falha ao efetuar login</div>
-	 @endif --}}
-	 {{-- @endif --}}
-         
-    {{-- </form> --}}
-
-
-
-
-
-
