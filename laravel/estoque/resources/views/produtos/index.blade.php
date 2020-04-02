@@ -2,35 +2,40 @@
 
 @section('content')
 
-     <!-- Font Awesome -->
+  <!-- Font Awesome -->
      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <!-- Bootstrap core CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.9/css/mdb.min.css" rel="stylesheet">
-
-
     <!-- JQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- Bootstrap tooltips -->
+    <!-- Drop Down -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-    <!-- Bootstrap core JavaScript -->
+    <!-- Drop  Down -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.9/js/mdb.min.js"></script>
-
+  
+    <style>
+        .btn{
+            margin-top: 0%;
+            margin-bottom: 0%;
+        }
+       
+    </style>
 <!--Grupo de Botões Principal-->
     <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
     <button type="button" class="btn btn-purple">Principal</button>
     <button type="button" class="btn btn-purple">Calendário</button>
-    <button type="button" class="btn btn-purple">Retirados</button>
+    
     
     <div class="btn-group" role="group">
         <button id="btnGroupDrop1" type="button" class="btn btn-purple dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Cadastrar..
+        Registrar..
         </button>
         <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
         <a class="dropdown-item" href="#">Fornecedor</a>
+        <a class="dropdown-item" href="#">Chegada</a>
+        <a class="dropdown-item" href="#">Saída</a>
         </div>
     </div>
     </div>
@@ -61,12 +66,12 @@ td,tr,th{
 @endif
 
 @if(sizeof($produtos) > 0)
-<table class="table table-sm table-bordered">
-    <tr>
+<table class="table table-sm table-bordered custom-checkbox">
+
         <th>#</th>
-        <th>nome</th>
-        <th>quantidade</th>
-        <th>preço</th>
+        <th>Nome</th>
+        <th>Quantidade</th>
+        <th>Preço</th>
         <th width="268px" >Ações</th>
     </tr>
     @foreach ($produtos as $produto)

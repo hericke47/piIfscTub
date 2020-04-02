@@ -19,3 +19,4 @@ Route::resource('produtos','ProdutoController');
 
 Route::view('login-usuario','login');
 
+Route::get('/', 'FullCalendarController@index')->name('index');

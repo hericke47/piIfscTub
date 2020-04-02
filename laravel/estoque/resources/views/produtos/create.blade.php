@@ -27,7 +27,7 @@
             </ul>
         </div>
     @endif
-
+      
     <form action="{{ route('produtos.store') }}" method="POST">
         @csrf
 
