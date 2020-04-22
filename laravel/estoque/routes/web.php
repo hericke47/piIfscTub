@@ -20,3 +20,5 @@ Route::resource('produtos','ProdutoController');
 Route::view('login-usuario','login');
 
 Route::get('/', 'FullCalendarController@index')->name('index');
+
+Route::get('/load-events-calendar ','EventCalendarController@loadEvents')->name('routeLoadEvents');

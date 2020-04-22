@@ -13,14 +13,14 @@ class CreateEventsTable extends Migration
      */
     public function up()
     {
-        Schema::create('events-calendar', function (Blueprint $table) {
-            $table->bigIncrements('id-event');
-            $table->string('title-event');
-            $table->dateTime('start-event');
-            $table->dateTime('end-event');
-            $table->string('color-event');
-            $table->longText('description-event')->nulltable();
-            $table->dateTime('start-event');
+        Schema::create('events', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('title');
+            $table->dateTime('start');
+            $table->dateTime('end');
+            $table->string('color');
+            $table->longText('description')->nulltable();
+            $table->dateTime('start');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -33,6 +33,6 @@ class CreateEventsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('events-calendar');
+        Schema::dropIfExists('events');
     }
 }

@@ -52,22 +52,25 @@ document.addEventListener('DOMContentLoaded', function() {
           arg.draggedEl.parentNode.removeChild(arg.draggedEl);
         }
       },
+      
     eventDrop: function(event){
         alert ('Você Está mudando a data de um evento já marcado');
       },
     eventClick: function(event){
-        alert ('Event Alert');
+        alert ('Você Selecionou um evento ativo');
       },
       eventResize: function(event){
         alert ('Event Resize');
       },
+      
       select: function(event){
         alert ('Event select');
       },
-     events:'',
-      
+
+     // events: routeEvents('routeLoadEvents'),
+     
     });
-
     calendar.render();
-
   });
+
+

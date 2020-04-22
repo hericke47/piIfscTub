@@ -9,5 +9,5 @@ class Event extends Model
 {
     use SoftDeletes;
 
-    protected $fillable = ['title-event', 'start-event', 'end-event', 'color-event', 'description-event'];
+    protected $fillable = ['title', 'start', 'end', 'color', 'description',];
 }

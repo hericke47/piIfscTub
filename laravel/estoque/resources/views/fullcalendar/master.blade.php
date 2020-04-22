@@ -7,13 +7,8 @@
 <link href=' {{asset("assets/fullcalendar/packages/timegrid/main.css")}}' rel='stylesheet' />
 <link href=' {{asset("assets/fullcalendar/packages/list/main.css")}}' rel='stylesheet' />
 <link href=' {{asset("assets/fullcalendar/csscalendar/style.blade.css")}}' rel='stylesheet' />
-<script src='{{asset("assets/fullcalendar/packages/core/main.js")}}'></script>
-<script src='{{asset("assets/fullcalendar/jscalendar/calendar.blade.js")}}'></script>
-<script src='{{asset("assets/fullcalendar/packages/interaction/main.js")}}'></script>
-<script src='{{asset("assets/fullcalendar/packages/daygrid/main.js")}}'></script>
-<script src='{{asset("assets/packages/fullcalendar/timegrid/main.js")}}'></script>
-<script src='{{asset("assets/fullcalendar/packages/list/main.js")}}'></script>
-<script src='{{asset("assets/fullcalendar/packages/core/locales-all.js")}}'></script>
+
+
 
 
 </head>
@@ -21,7 +16,7 @@
   <div id='wrap'>
 
     <div id='external-events'>
-      <h4>Draggable Events</h4>
+      <h4>Eventos Arrastáveis</h4>
 
       <div id='external-events-list'>
         <div class='fc-event'>Evento 1</div>
@@ -33,14 +28,25 @@
 
       <p>
         <input type='checkbox' id='drop-remove' />
-        <label for='drop-remove'>remove after drop</label>
+        <label for='drop-remove'>Remover após Arrastar</label>
       </p>
     </div>
 
-    <div id='calendar'></div>
+    <div id='calendar' data-route-load-events="{{ route ('routeLoadEvents')}}"></div>
 
     <div style='clear:both'></div>
 
   </div>
-</body>
+
+  <script src='{{asset("assets/fullcalendar/packages/core/main.js")}}'></script>
+  <script src='{{asset("assets/fullcalendar/jscalendar/calendar.blade.js")}}'></script>
+  <script src='{{asset("assets/fullcalendar/packages/interaction/main.js")}}'></script>
+  <script src='{{asset("assets/fullcalendar/packages/daygrid/main.js")}}'></script>
+  <script src='{{asset("assets/fullcalendar/packages/timegrid/main.js")}}'></script>
+  <script src='{{asset("assets/fullcalendar/packages/list/main.js")}}'></script>
+  <script src='{{asset("assets/fullcalendar/jscalendar/script.blade.js")}}'></script>
+  <script src='{{asset("assets/fullcalendar/packages/core/locales-all.js")}}'></script>
+
+  
+  </body>
 </html>
