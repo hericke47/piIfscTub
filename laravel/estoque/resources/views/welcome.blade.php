@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,9 +22,6 @@
         <li class="nav-item active">
           <a class="nav-link" href="{{ route('fornecedores.index') }}">Fornecedores <span class="sr-only"></span></a>
         </li>
-        
-       
-        
     </div>
     
       <form class="form-inline my-2 my-lg-0">

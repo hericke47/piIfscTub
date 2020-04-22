@@ -27,7 +27,13 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Preço</strong>
-                {{ $produto->preco }}
+                {{ $produto->preco. " R$" }}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Total</strong>
+                {{ $produto->preco * $produto->quantidade . " R$" }}
             </div>
         </div>
     </div>

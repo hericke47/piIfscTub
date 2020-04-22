@@ -18,20 +18,21 @@
     @endif
 
     @if(sizeof($produtos) > 0)
-        <table class="table table-bordered table-dark">
+        <table class="table table-bordered table-dark" id="id_tabela">
             <tr>
                 <th>#</th>
                 <th>nome</th>
                 <th>quantidade</th>
                 <th>preço</th>
-                <th width="280px">Ações</th>
+                <th>Total<th>
             </tr>
             @foreach ($produtos as $produto)
                 <tr>
                     <td>{{ ++$i }}</td>
                     <td>{{ $produto->nome }}</td>
                     <td>{{ $produto->quantidade }}</td>
-                    <td>{{ $produto->preco }}</td>
+                    <td>{{ $produto->preco . " R$" }}</td>
+                    <td>{{ $produto->preco * $produto->quantidade." R$"}}</td>
                     <td>
                         <form action="{{ route('produtos.destroy',$produto->id) }}" method="POST">
 

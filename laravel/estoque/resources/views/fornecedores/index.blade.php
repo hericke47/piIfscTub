@@ -25,7 +25,6 @@
                 <th>CNPJ</th>
                 <th>Número</th>
                 <th>Whatsapp</th>
-                <th width="280px">Ações</th>
             </tr>
             @foreach ($fornecedores as $fornecedor)
                 <tr>

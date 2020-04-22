@@ -31,18 +31,20 @@ class FornecedorController extends Controller
 
     }
 
-    public function show(Fornecedor $fornecedor)
+    public function show($id = null)
     {
-        return view('fornecedores.show',compact('fornecedor'));
+        $fornecedor = Fornecedor::find($id);
+        return view('fornecedores.show',compact('fornecedor'))->withFornecedor($fornecedor);
     }
 
 
-    public function edit(Fornecedor $fornecedor)
+    public function edit($id = null)
     {
-        return view('fornecedores.edit',compact('fornecedor'));
+        $fornecedor = Fornecedor::find($id);
+        return view('fornecedores.edit',compact('fornecedor'))->withFornecedor($fornecedor);
     }
 
-    public function update(Request $request, Fornecedor $fornecedor)
+    public function update(Request $request, Fornecedor $fornecedor, $id = null)
     {
         $request->validate([
             'razao' => 'required',
@@ -51,13 +53,15 @@ class FornecedorController extends Controller
             'whatsapp' => 'required',
         ]);
 
+        $fornecedor = Fornecedor::find($id);
         $fornecedor->update($request->all());
         return redirect()->route('fornecedores.index')->with('sucesso','Fornecedor atualizado com sucesso.');
     }
 
 
-    public function destroy(Fornecedor $fornecedor)
+    public function destroy($id = null)
     {
+        $fornecedor = Fornecedor::find($id);
         $fornecedor->delete();
         return redirect()->route('fornecedores.index')->with('sucesso','Fornecedor deletado com sucesso.');
     }
