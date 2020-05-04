@@ -28,7 +28,7 @@
             </tr>
             @foreach ($produtos as $produto)
                 <tr>
-                    <td>{{ ++$i }}</td>
+                    <td>{{ $produto->id }}</td>
                     <td>{{ $produto->nome }}</td>
                     <td>{{ $produto->quantidade }}</td>
                     <td>{{ $produto->preco . " R$" }}</td>
@@ -52,6 +52,5 @@
         <div class="alert alert-alert">adicionando produto</div>
     @endif
 
-    {!! $produtos->links() !!}
 
 @endsection

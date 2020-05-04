@@ -31,9 +31,9 @@ Route::get('/admin/logout', 'AuthController@logout')->name('admin.logout');
 Route::post('/admin/login/do','AuthController@login')->name('admin.login.do');
 
 
-
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::post('produtos/busca','ProdutoController@busca');
 
 

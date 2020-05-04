@@ -6,6 +6,7 @@
     <div class="col-lg-12">
         <h2 class="text-center">Cadastro de Fornecedores</h2>
     </div>
+    
     <div class="col-lg-12 text-center" style="margin-top:10px;margin-bottom: 10px;">
         <a class="btn btn-success " href="{{ route('fornecedores.create') }}"> Adicionar Fornecedor</a>
     </div>
@@ -28,12 +29,13 @@
             </tr>
             @foreach ($fornecedores as $fornecedor)
                 <tr>
-                    <td>{{ ++$i }} </td>
+                    <td>{{ $fornecedor->id }} </td>
                     <td>{{ $fornecedor->razao }}</td>
                     <td>{{ $fornecedor->cnpj }}</td>
                     <td>{{ $fornecedor->numero }}</td>
                     <td>{{ $fornecedor->whatsapp }}</td>
                     <td>
+                        
                         <form action="{{ route('fornecedores.destroy',$fornecedor->id) }}" method="POST">
 
                             <a class="btn btn-info" href="{{ route('fornecedores.show',$fornecedor->id) }}">Mostrar</a>
@@ -48,6 +50,7 @@
                 </tr>
             @endforeach
         </table>
+        
     @else
         <div class="alert alert-alert">adicionando Fornecedor</div>
     @endif

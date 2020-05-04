@@ -10,4 +10,9 @@ class Produto extends Model
     ];
 
     protected $table = "produtos";
+
+    public static function busca($criterio)
+    {
+        return static::where('nome', 'LIKE', '%' . $criterio . '%')->get();
+    }
 }

@@ -31,6 +31,14 @@ class ProdutoController extends Controller
         return redirect()->route('produtos.index')->with('sucesso','Produto Cadastrado com sucesso.');
     }
 
+    public function busca(Request $request){
+        $produtos = Produto::busca($request->criterio);
+
+        return view('produtos.index', 
+        ['produtos' => $produtos, 
+        'criterio' => $request->criterio]);
+    }
+
     public function show(Produto $produto)
     {
         return view('produtos.show',compact('produto'));
