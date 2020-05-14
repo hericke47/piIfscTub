@@ -22,7 +22,11 @@
         <li class="nav-item active">
           <a class="nav-link" href="{{ route('fornecedores.index') }}">Fornecedores <span class="sr-only"></span></a>
         </li>
+        <a class="nav-link active" href="{{ url('calendario') }}">Calendario <span class="sr-only"></span></a>
+
     </div>
+
+    
     
     <form class="form-inline my-2 my-lg-0" action="{{ url('produtos/busca') }}" method="POST">
       {{ csrf_field() }}
