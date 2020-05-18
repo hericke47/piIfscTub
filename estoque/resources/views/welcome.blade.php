@@ -6,6 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+
+      #buscar{
+        background-color:whitesmoke;
+      }
+
+      #buscar:hover{
+        background-color:green;
+      }
+
+      .navbar{
+        height: 80px;
+      }
+    </style>
 </head>
 <body>
     {{-- <a href="{{ route('produtos.index') }}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Produtos </a>
@@ -31,7 +45,7 @@
     <form class="form-inline my-2 my-lg-0" action="{{ url('produtos/busca') }}" method="POST">
       {{ csrf_field() }}
       <input class="form-control mr-sm-2" type="text" placeholder="Search" name="criterio" aria-label="Search">
-      <button class="btn btn-light my-2 my-sm-0 " type="submit">Buscar</button>
+      <button class="btn btn-outline-success my-2 my-sm-0" id="buscar" type="submit">Buscar</button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
