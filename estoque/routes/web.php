@@ -24,6 +24,9 @@
 
 Route::resource('produtos','ProdutoController');
 Route::resource('fornecedores','FornecedorController');
+Route::get('registroChegada','ProdutoController@registroChegada');
+
+
 
 Route::get('/admin','AuthController@dashboard')->name('admin');
 Route::get('/admin/login', 'AuthController@showLoginForm')->name('admin.login');

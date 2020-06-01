@@ -7,8 +7,9 @@
 <body>
 
 <div class="container text-center ">
-    <div class="card" style="margin-top: 100px;" >
+    <div class="card" style="border:5px solid black; margin-top: 100px;" >
         <div class="card-body">
+
             @yield('content')
         </div>
     </div>

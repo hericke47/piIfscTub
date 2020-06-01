@@ -14,10 +14,20 @@ class ProdutoController extends Controller
         return view('produtos.index',compact('produtos'))->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
+
     public function create()
     {
         return view('produtos.create');
     }
+
+
+    public function registroChegada(Request $request)
+    {
+        $produtos = Produto::latest()->paginate();
+        return view('produtos.registroChegada',compact('produtos'))->with('i', (request()->input('page', 1) - 1) * 5);
+        
+    }
+
 
     public function store(Request $request)
     {
@@ -31,6 +41,7 @@ class ProdutoController extends Controller
         return redirect()->route('produtos.index')->with('sucesso','Produto Cadastrado com sucesso.');
     }
 
+
     public function busca(Request $request){
         $produtos = Produto::busca($request->criterio);
 
@@ -38,6 +49,7 @@ class ProdutoController extends Controller
         ['produtos' => $produtos, 
         'criterio' => $request->criterio]);
     }
+
 
     public function show(Produto $produto)
     {
@@ -49,6 +61,7 @@ class ProdutoController extends Controller
     {
         return view('produtos.edit',compact('produto'));
     }
+
 
     public function update(Request $request, Produto $produto)
     {

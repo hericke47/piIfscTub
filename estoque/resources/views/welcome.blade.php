@@ -13,7 +13,7 @@
       }
 
       #buscar:hover{
-        background-color:green;
+        background-color:#00a86b ;
       }
 
       .navbar{
@@ -24,7 +24,6 @@
 <body>
     {{-- <a href="{{ route('produtos.index') }}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Produtos </a>
 <a href="{{ route('fornecedores.index') }}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Fornecedores</a> --}}
-
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
     <a class="navbar-brand" href="{{ route('produtos.index') }}">Produtos</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,10 +36,10 @@
           <a class="nav-link" href="{{ route('fornecedores.index') }}">Fornecedores <span class="sr-only"></span></a>
         </li>
         <a class="nav-link active" href="{{ url('calendario') }}">Calendario <span class="sr-only"></span></a>
+        <a class="nav-link active" href="{{ url('registroChegada') }}">Registro Chegada <span class="sr-only"></span></a>
 
     </div>
 
-    
     
     <form class="form-inline my-2 my-lg-0" action="{{ url('produtos/busca') }}" method="POST">
       {{ csrf_field() }}

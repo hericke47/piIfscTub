@@ -1,7 +1,8 @@
 @extends('produtos.layout')
 @extends('../welcome')
 @section('content')
-
+<style>
+</style>
     <div class="row">
         <div class="col-lg-12">
             <h2 class="text-center">Cadastro de Produtos</h2>
